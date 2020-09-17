@@ -3,36 +3,151 @@
   box-sizing:border-box;  
 }
 
-@font-face {
+/*@font-face {
 	font-family: "Montserrat";
 	src: url(Montserrat-Medium.ttf);
-}
+}*/
 
 body {
 	background-color: #FAF9EC;
+	margin: 0;
+	color: #1A1818;
 }
 
-.top-nav {
-	list-style-type: none;
-	padding: 2em 1em 0;
-    width: 100%;
-    margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75em;
-    text-transform: uppercase;
-    display: flex;
-	justify-content: space-between;
-	align-items: center
+/*NAV AND HEADER*/
+header {
+	margin-right: 1em;
+	margin-left: 1em;
+}
+h1 {
+	font-family: monarcha, serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 8vw;
+	line-height: 1em;
+	text-align: center;
+	padding-left: 2em;
+	padding-right: 2em;
 }
 
-.top-nav li {
-	display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.top-nav li a {
-	padding: 15px 10px;
+h1 a {
 	text-decoration: none;
 	color: #1A1818;
 }
+
+nav a {
+	display: block;
+	text-align: center;
+}
+
+nav.top-nav-container a {
+	padding-top: 1em;
+}
+
+nav.middle-nav-container a {
+	padding-top: 1em;
+}
+
+figure {
+	margin-top: 0em;
+}
+figure.header-image img {
+	width: 100%;
+	height: auto;
+}
+
+/*MAIN*/
+main {
+	padding-top: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+article {
+	position: relative;
+	border-top: 2px solid  #1A1818;
+	padding-top: 2em;
+	padding-bottom: 3em;
+}
+article img {
+	width: 100%;
+	/*height: auto;*/
+	height: 450px;
+	border: 3px solid #1A1818;
+	border-radius: 177px 177px 0px 0px;
+	object-fit: cover;
+}
+h2 {
+	text-transform: uppercase;
+	font-family: montserrat, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: 0.05em;
+	font-size: 0.9em;
+	text-align: center;
+	padding-bottom: 2em;
+	margin-top: 0;
+	text-shadow:  0px 5px 3px rgba(26, 24, 24, 0.16);
+}
+
+h3 {
+	font-family: gastromond, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.3em;
+}
+
+p {
+	font-family: montserrat,sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 0.9em;
+	line-height: 1.6em;
+}
+
+time {
+	font-family: montserrat,sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 0.9em;
+	line-height: 1.6em;
+}
+
+.button {
+	font-family: montserrat,sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 0.8em;
+	line-height: 1.6em;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	border: 2px solid #1A1818;
+	background-color: transparent;
+	padding: 1em;
+	margin: 2em 4.5em;
+	text-decoration: none;
+	color: #1A1818;
+	text-align: center;
+	display: block;
+}
+
+/*FASHION*/
+.fashion h2 {
+	color: #5667EB;
+	text-shadow:  0px 5px 3px rgba(86, 103, 235, 0.27);
+}
+
+.fashion h3 {
+	color: #5667EB;
+}
+
+.fashion img {
+	border: 3px solid #5667EB;
+	border-radius: 0px 0px 0px 0px;
+}
+
+.fashion .button {
+	border: 2px solid #5667EB;
+	color: #5667EB;
+}
+
