@@ -38,15 +38,26 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+Dit ging goed: Vormgeving met HTML en CSS ging goed, maar ik ben onzeker of het goed/semantisch is.
+Dit ging lastig: 
+- flexbox gebruiken voor responsiveness van articles.
+- correct gebruik van css voor positioneren en vormgeven
+- h1 grootte aanpassen bij mobiel en desktop
 
 **Screenshot(s):**
 
--screenshot(s) van hoe ver je bent-
+(images/voortgang1-screenshot.png)
+
 
 ### Agenda voor meeting
 
--samen met je groepje opstellen-
+- dingen naast elkaar zetten. Op mobiel bijvoorbeeld 2 en dekstop 4
+- Hoe kun je makkelijker zien nth gebeuren
+- Mag je classes  gebruiken
+- Mag je classes  gebruiken
+- Moet je hamburger laten werken? 
+- Hoe zet je het om in een hamburgermenu
+- flexbox vragen, naast elkaar zetten bijvoorbeeld.
 
 ### Verslag van meeting
 
