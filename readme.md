@@ -44,8 +44,8 @@ Dit ging lastig:
 
 **Screenshot(s):**
 
-(images/voortgang2-screenshot.png)
-(images/voortgang2-screenshot2.png)
+[Screenshot1](images/voortgang2-screenshot.png)
+[Screenshot1](images/voortgang2-screenshot2.png)
 
 ### Agenda voor meeting
 
@@ -67,7 +67,7 @@ Dit ging lastig:
 
 **Screenshot(s):**
 
-(images/voortgang1-screenshot.png)
+!(images/voortgang1-screenshot.png)
 
 
 ### Agenda voor meeting
