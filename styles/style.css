@@ -11,6 +11,7 @@
 body {
 	background-color: #FAF9EC;
 	margin: 0;
+	height: 160px;
 	color: #1A1818;
 }
 
@@ -23,7 +24,7 @@ h1 {
 	font-family: monarcha, serif;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 8vw;
+	font-size: clamp(20px, 8vw, 54px);
 	line-height: 1em;
 	text-align: center;
 	padding-left: 2em;
@@ -35,49 +36,164 @@ h1 a {
 	color: #1A1818;
 }
 
+body > nav:first-of-type {
+	display: flex;
+	padding: 3em 4em 0;
+	width: 100%;
+	margin: 0 auto;
+	font-family: 'Montserrat', sans-serif;
+	font-size: clamp(14px, 4vw, 19px);
+	text-transform: uppercase;
+	align-items: center;
+}
+
+body nav:first-of-type ul:first-of-type a:hover {
+	color: #5667EB;
+	text-decoration: underline;
+}
+
+body nav:nth-of-type(2) a {
+	padding-top: 2em;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
 nav a {
 	display: block;
 	text-align: center;
 }
 
-nav.top-nav-container a {
-	padding-top: 1em;
+nav ul:first-of-type {
+	flex: 1;
 }
 
-nav.middle-nav-container a {
-	padding-top: 1em;
+nav li:not(:last-child) {
+	margin-right: 1.4em;
+}
+
+nav:first-of-type li a, header nav:nth-of-type(2) li a {
+	padding: 15px 10px;
+	text-decoration: none;
+	color: #1A1818;
+	font-size: 0.8em;
+}
+
+header nav:nth-of-type(2) {
+	font-family: 'Montserrat', sans-serif;
+	font-size: clamp(14px, 4vw, 19px);
+	text-transform: uppercase;
+}
+
+header nav:nth-of-type(2) ul {
+	justify-content: center;
 }
 
 figure {
 	margin-top: 0em;
+	text-align: center;
 }
-figure.header-image img {
-	width: 100%;
+figure:first-of-type img {
+	width: 75%;
 	height: auto;
 }
+
 
 /*MAIN*/
 main {
 	padding-top: 2em;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: 2.3em;
+	padding-right: 2.3em;
 }
 
+/*BEAUTY AND FASHION*/
 article {
-	position: relative;
 	border-top: 2px solid  #1A1818;
 	padding-top: 2em;
 	padding-bottom: 3em;
 }
+
+.article-container {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	margin: 0 auto;
+	/*border-top: 2px solid  #1A1818;
+	padding-top: 2em;
+	padding-bottom: 3em;*/
+}
+
+.article-image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.article-image a {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.article-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+#mobile-nav {
+	display: block;
+}
+
+#desktop-nav {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.article-container {
+		max-width: unset;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	body .article-content {
+		text-align: unset;
+		max-width: unset;
+		padding-left: 2em;
+	}
+
+	.article-container .button {
+		margin: 2em 12em 0 0;
+	}
+
+	#mobile-nav {
+		display: none;
+	}
+
+	#desktop-nav {
+		display: flex;
+	}
+
+	time {
+		position: absolute;
+		left: 0;
+		transform: rotate(-90deg);
+	}
+}
+
 article img {
 	width: 100%;
-	/*height: auto;*/
-	height: 450px;
+	height: 350px;
 	border: 3px solid #1A1818;
-	border-radius: 177px 177px 0px 0px;
+	border-radius: 19em 19em 0px 0px;
 	object-fit: cover;
 }
-h2 {
+
+
+main h2 {
 	text-transform: uppercase;
 	font-family: montserrat, sans-serif;
 	font-weight: 500;
@@ -90,7 +206,7 @@ h2 {
 	text-shadow:  0px 5px 3px rgba(26, 24, 24, 0.16);
 }
 
-h3 {
+main h3 {
 	font-family: gastromond, sans-serif;
 	font-weight: 400;
 	font-style: normal;
@@ -101,8 +217,9 @@ p {
 	font-family: montserrat,sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 0.9em;
+	font-size: 0.9375em;
 	line-height: 1.6em;
+	text-align: justify;
 }
 
 time {
@@ -132,22 +249,164 @@ time {
 }
 
 /*FASHION*/
-.fashion h2 {
+article:nth-of-type(2) h2 {
 	color: #5667EB;
 	text-shadow:  0px 5px 3px rgba(86, 103, 235, 0.27);
 }
 
-.fashion h3 {
+article:nth-of-type(2) h3 {
 	color: #5667EB;
 }
 
-.fashion img {
+article:nth-of-type(2) img {
 	border: 3px solid #5667EB;
 	border-radius: 0px 0px 0px 0px;
 }
 
-.fashion .button {
+article:nth-of-type(2) .button {
 	border: 2px solid #5667EB;
 	color: #5667EB;
+}
+
+/*THOUGHTS*/
+article:nth-of-type(3) {
+	background-color: #2F2F2F;
+	margin: 0 -2.3em;
+	padding: 2.3em;
+}
+
+article:nth-of-type(3) h2 {
+	color: #FAF9EC;
+	text-shadow:  0px 5px 3px rgba(86, 103, 235, 0.27);
+}
+
+article:nth-of-type(3) h3 {
+	font-family: montserrat,sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	text-transform: uppercase;
+	color: #FAF9EC;
+}
+
+article:nth-of-type(3) p {
+	color: #FAF9EC;
+}
+
+article:nth-of-type(3) img {
+	border-style: none;
+	border-radius: 0px 0px 0px 0px;
+}
+
+article:nth-of-type(3) .button {
+	border: 2px solid #FAF9EC;
+	color: #FAF9EC;
+}
+
+/*section 1*/
+
+main section:first-of-type {
+	padding: 3em;
+}
+
+main section:first-of-type h2{
+	text-shadow: none;
+	font-weight: 300;
+	padding-bottom: 0;
+}
+main section:first-of-type p{
+	text-align: center;
+	font-weight: 300;
+}
+
+
+/*section 2*/
+main section:nth-of-type(2) {
+	padding-bottom: 3em;
+	border-bottom: 2px solid #1A1818;
+}
+
+main section:nth-of-type(2) h2{
+	text-shadow: none;
+	font-weight: 300;
+	padding-bottom: 0;
+}
+
+main section:nth-of-type(2) a{
+	text-decoration: none;
+	font-family: 'Montserrat';
+	font-weight: 300;
+	font-size: 1.1em;
+	color: black;
+	padding-bottom: 1em;
+	display: block;
+	text-align: center;
+}
+
+main section:nth-of-type(2) div {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+  	grid-template-rows: repeat(3, 1fr);
+  	grid-gap: 5px;
+  	text-align: center;
+}
+
+main section:nth-of-type(2) img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*footer*/
+
+footer {
+	font-family: "Montserrat";
+	padding-top: 1em;
+	font-weight: 500;
+}
+
+footer h2, h3 {
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+
+footer h3 {
+	padding-top: 1em;
+}
+
+footer ul:first-of-type, footer ul:nth-of-type(2) {
+	list-style: none;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	padding-left: 0;
+}
+
+footer section:first-of-type li {
+	padding-bottom: 1.5em;
+}
+
+footer section:first-of-type {
+	padding-left: 2.3em;
+	padding-right: 2.3em;
+	padding-bottom: 2em;
+	text-align: center;
+}
+
+footer section:nth-of-type(2) {
+	background-color: #1F1E1D;
+	color: #FAF9EC;
+}
+
+footer section:nth-of-type(2) {
+	padding: 15px 10px;
+	text-transform: uppercase;
+	font-size: 0.7em;
+	text-align: center;
+	letter-spacing: .15em;
+}
+
+footer h4 a{
+	font-family: monarcha, serif;
+	text-decoration: none;
+	color: #FAF9EC;
+	font-size: 1.2em;
 }
 
