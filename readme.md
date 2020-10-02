@@ -32,6 +32,27 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 -same as voortgang 1-
 
+### Stand van zaken
+
+Dit ging goed: Het is mij gelukt om mijn navigatie en de articles responsive te maken met grid en mediaqueries. 
+Dit ging lastig: 
+- Ik moet nog kijken hoe ik een max width moet zetten voor mijn content wanneer het scherm breder wordt zodat de content niet meeschaalt.
+- Responsiveness en mediaqueries toepassen voor andere onderdelen van mijn website.
+- Images zijn vorm laten houden wanneer je ze schaalt!
+- styling met css soms nog lastig.
+
+
+**Screenshot(s):**
+
+(images/voortgang2-screenshot.png)
+(images/voortgang2-screenshot2.png)
+
+### Agenda voor meeting
+
+### Verslag van meeting
+
+-na afloop snel uitkomsten vastleggen-
+
 
 
 ## Voortgang 1 (week 3)
