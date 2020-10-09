@@ -24,13 +24,18 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 3 (week 6)
 
--same as voortgang 1-
+Dit ging goed: Website resposive maken met mediaqueries en positioneren van elementen. Images schaalt nu goed mee.
+Dit ging lastig:
+- Ik ben nog aan het kijken hoe ik de hamburger menu het beste kan maken.
+- Positioneren van de datum bij een article nog lastig. Het gaat buiten de element als je het scherm breder maakt. Ik heb het met grid geprobeerd te aanpassen maar als ik het omdraaid dan gaat de element buiten het article.
 
+**Screenshot(s):**
+
+[Screenshot1](images/voortgang-screenshot3.png)
+[Screenshot2](images/voortgang-screenshot4.png)
 
 
 ## Voortgang 2 (week 5)
-
--same as voortgang 1-
 
 ### Stand van zaken
 
