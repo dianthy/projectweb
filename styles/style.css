@@ -47,10 +47,10 @@ body > nav:first-of-type {
 	align-items: center;
 }
 
-body nav:first-of-type ul:first-of-type a:hover {
+/*body nav:first-of-type ul:first-of-type a:hover {
 	color: #5667EB;
 	text-decoration: underline;
-}
+}*/
 
 body nav:nth-of-type(2) a {
 	padding-top: 2em;
@@ -82,6 +82,32 @@ nav:first-of-type li a, header nav:nth-of-type(2) li a {
 	color: #1A1818;
 	font-size: 0.8em;
 }
+
+nav:first-of-type a, nav:nth-of-type(2) a {
+      position: relative;
+      text-decoration: none;
+      
+    }
+    a::before, a::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      transition: .3s;
+    }
+    a::before {
+      bottom: 0;
+      left: 50%;
+      border-top: 2px #5667EB;
+
+    }
+    a::after {
+      right: 50%;
+      bottom: 0;
+      border-bottom: 2px #5667EB;
+    }
+    a:hover::before, a:hover::after {
+      width: 50%;
+    }
 
 header nav:nth-of-type(2) {
 	font-family: 'Montserrat', sans-serif;
@@ -284,7 +310,7 @@ article:nth-of-type(3) .button {
 	color: #FAF9EC;
 }
 
-/*section 1*/
+/*section*/
 main section {
 	border-bottom: 3px solid #1A1818;
 	padding-top: 3em;
@@ -382,6 +408,8 @@ input[type="submit"] {
 .thoughts2{
 		display: none;
 	}
+
+
 /*footer*/
 
 footer {
