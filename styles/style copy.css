@@ -98,7 +98,7 @@ figure {
 	text-align: center;
 }
 figure:first-of-type img {
-	width: 100%;
+	width: 75%;
 	height: auto;
 }
 
@@ -108,7 +108,6 @@ main {
 	padding-top: 2em;
 	padding-left: 2.3em;
 	padding-right: 2.3em;
-	margin: 0 auto;
 }
 
 /*BEAUTY AND FASHION*/
@@ -116,34 +115,30 @@ article {
 	border-top: 2px solid  #1A1818;
 	padding-top: 2em;
 	padding-bottom: 3em;
-	display: grid;
-	margin: 0 auto;
-	column-gap: 3em;
-
 }
 
-/*.article-container {
+.article-container {
 	display: grid;
-	/*grid-template-columns: repeat(1, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	margin: 0 auto;
 	/*border-top: 2px solid  #1A1818;
 	padding-top: 2em;
-	padding-bottom: 3em;
-}*/
+	padding-bottom: 3em;*/
+}
 
-article div:first-of-type {
+.article-image {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-/*article div:first-of-type a {
+.article-image a {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-}*/
+}
 
-article div:nth-of-type(2) {
+.article-content {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -158,9 +153,40 @@ article div:nth-of-type(2) {
 	display: none;
 }
 
+@media (min-width: 768px) {
+	.article-container {
+		max-width: unset;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	body .article-content {
+		text-align: unset;
+		max-width: unset;
+		padding-left: 2em;
+	}
+
+	.article-container .button {
+		margin: 2em 12em 0 0;
+	}
+
+	#mobile-nav {
+		display: none;
+	}
+
+	#desktop-nav {
+		display: flex;
+	}
+
+	time {
+		position: absolute;
+		left: 0;
+		transform: rotate(-90deg);
+	}
+}
+
 
 article img {
-	width: 18.5em;
+	width: 100%;
 	height: 420px;
 	border: 3px solid #1A1818;
 	border-radius: 19em 19em 0px 0px;
@@ -174,7 +200,7 @@ main h2 {
 	font-weight: 500;
 	font-style: normal;
 	letter-spacing: 0.05em;
-	font-size: clamp(0.9em, 4vw, 1.3em);
+	font-size: 0.9em;
 	text-align: center;
 	padding-bottom: 2em;
 	margin-top: 0;
@@ -185,14 +211,14 @@ main h3 {
 	font-family: gastromond, sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: clamp(1.375em, 3vw, 2em);
+	font-size: 1.3em;
 }
 
 p {
 	font-family: montserrat,sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: clamp(0.937em, 2vw, 1.3em);
+	font-size: 0.9375em;
 	line-height: 1.6em;
 	text-align: justify;
 }
@@ -209,19 +235,18 @@ time {
 	font-family: montserrat,sans-serif;
 	font-weight: 500;
 	font-style: normal;
-	font-size: clamp(0.9em, 1.5vw, 1.125em);
+	font-size: 0.8em;
 	line-height: 1.6em;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	border: 2px solid #1A1818;
 	background-color: transparent;
 	padding: 1em;
+	margin: 2em 4.5em;
 	text-decoration: none;
 	color: #1A1818;
 	text-align: center;
 	display: block;
-	width: 300px;
-	margin: 2em auto;
 }
 
 /*FASHION*/
@@ -247,9 +272,8 @@ article:nth-of-type(2) .button {
 /*THOUGHTS*/
 article:nth-of-type(3) {
 	background-color: #2F2F2F;
-	/*margin: 0 -2.3em;*/
-	justify-items: center;
-	/*padding: 2em 17em 0em 17em;*/
+	margin: 0 -2.3em;
+	padding: 2.3em;
 }
 
 article:nth-of-type(3) h2 {
@@ -259,19 +283,14 @@ article:nth-of-type(3) h2 {
 
 article:nth-of-type(3) h3 {
 	font-family: montserrat,sans-serif;
-	font-weight: 700;
+	font-weight: 500;
 	font-style: normal;
 	text-transform: uppercase;
 	color: #FAF9EC;
-	max-width: 300px;
-	font-size: 1em;
 }
 
 article:nth-of-type(3) p {
 	color: #FAF9EC;
-	max-width: 300px;
-	font-size: 1em;
-    line-height: 2em;
 }
 
 article:nth-of-type(3) img {
@@ -285,32 +304,35 @@ article:nth-of-type(3) .button {
 }
 
 /*section 1*/
-main section {
-	border-bottom: 3px solid #1A1818;
-	padding-top: 3em;
-	padding-bottom: 7em;
+
+main section:first-of-type {
+	padding: 3em;
 }
 
-main section div:nth-of-type(2) h2{
+main section:first-of-type h2{
 	text-shadow: none;
 	font-weight: 300;
 	padding-bottom: 0;
 }
-main section div:nth-of-type(2) p{
+main section:first-of-type p{
 	text-align: center;
 	font-weight: 300;
 }
 
 
 /*section 2*/
+main section:nth-of-type(2) {
+	padding-bottom: 3em;
+	border-bottom: 2px solid #1A1818;
+}
 
-main section div:first-of-type h2{
+main section:nth-of-type(2) h2{
 	text-shadow: none;
 	font-weight: 300;
 	padding-bottom: 0;
 }
 
-main section div:first-of-type a{
+main section:nth-of-type(2) a{
 	text-decoration: none;
 	font-family: 'Montserrat';
 	font-weight: 300;
@@ -321,67 +343,19 @@ main section div:first-of-type a{
 	text-align: center;
 }
 
-main section div:first-of-type div {
+main section:nth-of-type(2) div {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
   	grid-template-rows: repeat(3, 1fr);
-  	grid-gap: 0.7em;
-  	margin: 0 auto;
-    max-width: 19em;
+  	grid-gap: 5px;
+  	text-align: center;
 }
 
-main section div:nth-of-type(2) {
-	margin-top: 6em;
-
-}
-
-main section div:first-of-type img {
+main section:nth-of-type(2) img {
 	max-width: 100%;
 	height: auto;
 }
 
-form {
-    margin: 2em auto;
-    max-width: 350px;
- }
-
-input[type="email"] {
-	border: 0;
-    outline: none;
-    width: 100%;
-    padding: 1em 0;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    background-color: transparent;
-    border-bottom: 2px solid black;
-    font-size: 0.8em;
-
-}
-
-input[type="submit"] {
-	border:0;
-	outline; none;
-	font-family: montserrat,sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: clamp(0.9em, 1.5vw, 1.125em);
-    line-height: 1.6em;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border: 2px solid #1A1818;
-    background-color: transparent;
-    padding: 1em;
-    margin-top: 2em;
-    text-decoration: none;
-    color: #1A1818;
-    text-align: center;
-    width: 100%;
-}
-
-.thoughts2{
-		display: none;
-	}
 /*footer*/
 
 footer {
@@ -390,22 +364,13 @@ footer {
 	font-weight: 500;
 }
 
-footer h2, footer h3 {
+footer h2, h3 {
 	text-transform: uppercase;
 	font-size: 0.9em;
 }
 
 footer h3 {
 	padding-top: 1em;
-}
-
-footer section:first-of-type {
-	padding-left: 2.3em;
-	padding-right: 2.3em;
-	padding-bottom: 2em;
-	display: grid;
-	max-width: 600px;
-	margin: auto;
 }
 
 footer ul:first-of-type, footer ul:nth-of-type(2) {
@@ -417,6 +382,13 @@ footer ul:first-of-type, footer ul:nth-of-type(2) {
 
 footer section:first-of-type li {
 	padding-bottom: 1.5em;
+}
+
+footer section:first-of-type {
+	padding-left: 2.3em;
+	padding-right: 2.3em;
+	padding-bottom: 2em;
+	text-align: center;
 }
 
 footer section:nth-of-type(2) {
@@ -437,120 +409,5 @@ footer h4 a{
 	text-decoration: none;
 	color: #FAF9EC;
 	font-size: 1.2em;
-}
-
-/*MEDIA QUERY*/
-@media (max-width: 439px) {
-	main {
-		max-width: 100%;
-	}
-}
-
-@media (min-width: 440px) {
-	main {
-		max-width: 600px;
-	}
-}
-
-@media (min-width: 768px) {
-	/*.article-container {
-		max-width: unset;
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	body .article-content {
-		text-align: unset;
-		max-width: unset;
-		padding-left: 2em;
-	}*/
-
-	main {
-		max-width: 900px;
-	}
-
-	article:not(:nth-of-type(3)) img {
-		width: 29vw;
-		height: 42vw;
-	}
-	
-	article {
-		grid-template-rows: 7em;
-	}
-
-
-	article:not(:nth-of-type(3)) h2  {
-		grid-column: span 2;
-	}
-
-
-	article:first-of-type h3 {
-		text-align: left;
-	}
-
-	article:first-of-type div:nth-of-type(2) a{
-		margin: 2em 0 0;
-		max-width: 300px;
-	}
-
-	article:nth-of-type(2) div:first-of-type {
-		order:3;
-	}
-
-	article:nth-of-type(2) div {
-		text-align: center;
-	}
-
-	article:nth-of-type(2) p {
-		text-align: center;
-	}
-
-	article:nth-of-type(2) div:nth-of-type(2) a{
-		width: 300px;
-		margin: 2em auto;
-	}
-
-	/*section*/
-
-	main section {
-	display: flex;
-	}
-
-	main section div {
-		margin: auto;
-	}
-
-	/*footer section:first-of-type {
-		max-width: 900px;
-		margin: auto;
-	}*/
-
-	footer section:first-of-type {
-		max-width: 900px;
-	}
-
-	footer section:first-of-type h2{
-		grid-column: span 2;
-	}
-
-
-	#mobile-nav {
-		display: none;
-	}
-
-	#desktop-nav {
-		display: flex;
-	}
-
-	time {
-		position: absolute;
-		left: 0;
-		transform: rotate(-90deg);
-	}
-}
-
-@media (min-width: 905px) {
-	main {
-		max-width: 1080px;
-	}
 }
 

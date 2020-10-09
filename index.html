@@ -12,6 +12,7 @@
 		
 		<!--FONTS-->
 		<link rel="stylesheet" href="https://use.typekit.net/qbz0plf.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<nav id="desktop-nav" class="top-nav">
@@ -51,13 +52,13 @@
 			<nav id="desktop-nav">
 				<ul>
 					<li>
-						<a href="#">Home</a>
+						<a href="#">Thoughts</a>
 					</li>
 					<li>
-						<a href="#">About me</a>
+						<a href="#">Fashion</a>
 					</li>
 					<li>
-						<a href="#">Contact</a>
+						<a href="#">Beauty & Skincare</a>
 					</li>
 				</ul>
 			</nav>
@@ -68,38 +69,35 @@
 		<main>
 			<article class="beauty-skincare">
 				<h2>Beauty & skincare</h2>
-				<div class="article-container">
-					<div class="article-image">
-						<a href="#">
-							<img src="images/bottles.png" alt="">
-						</a>
-						<time datetime="1-6-2020 12:13">11 jun, 2020</time>
-					</div>
-					<div class="article-content">
-						<h3>Ethical beauty? Here's what you need to know!</h3>
-						<p>You’ve probably heard about “cruelty-free”, “vegan” and “organic” cosmetic products. But, what do these terms actually mean?</p>
-						<a href="#" class="button">Read more</a>
-					</div>
+				<div class="article-image">
+					<a href="#">
+						<img src="images/bottles.png" alt="">
+					</a>
+					<time datetime="1-6-2020 12:13">11 jun, 2020</time>
+				</div>
+				<div class="article-content">
+					<h3>Ethical beauty? Here's what you need to know!</h3>
+					<p>You’ve probably heard about “cruelty-free”, “vegan” and “organic” cosmetic products. But, what do these terms actually mean?</p>
+					<a href="#" class="button">Read more</a>
 				</div>
 			</article>
 			<article class="fashion">
 				<h2>Fashion</h2>
-				<div class="article-container">
-					<div class="article-image">
-						<a href="#">
-							<img src="images/fashion.png" alt="">
-						</a>
-						<time datetime="1-6-2020 12:13">15 jun, 2020</time>
-					</div>
-					<div class="article-content">
-						<h3>The Cost of Fast Fashion</h3>
-						<p>Do you ever think about how high fashion trends are available to you in no time for a waaay cheaper price at Zara, H&M or Fashion Nova? Cool, right?
-							<br>
-						Wrong! Behind the scenes, this system violates human rights and impact our environment negatively.</p>
+				<div class="article-image">
+					<a href="#">
+						<img src="images/fashion.png" alt="">
+					</a>
+					<time datetime="1-6-2020 12:13">15 jun, 2020</time>
+				</div>
+				<div class="article-content">
+					<h3>The Cost of Fast Fashion</h3>
+					<p>Do you ever think about how high fashion trends are available to you in no time for a waaay cheaper price at Zara, H&M or Fashion Nova? Cool, right?
+						<br>
+						<p>Wrong! Behind the scenes, this system violates human rights and impact our environment negatively.</p>
 						<a href="#" class="button">Read more</a>
 					</div>
 				</article>
-				<article class="thoughts">
+				<article id=thoughts1 class="thoughts1">
 					<h2>Thoughts</h2>
 					<a href="#">
 						<img src="images/coming-soon.png" alt="">
@@ -109,42 +107,51 @@
 					<a href="#" class="button">Post coming soon</a>
 				</article>
 				<section>
-					<h2>Keep up with new posts!</h2>
-					<p>Don't worry, only good stuff. No spam.</p>
-					<p>Email adress</p>
-					<a href="#" class="button">Sign me up</a>
-				</section>
-				<section>
-					<h2>Follow me on instagram</h2>
-					<a href="#">@dianthykock</a>
 					<div>
-						<img src="images/Insta-1.png" alt="">
-						<img src="images/Insta-2.png" alt="">
-						<img src="images/Insta-3.png" alt="">
-						<img src="images/Insta-4.png" alt="">
-						<img src="images/Insta-5.png" alt="">
-						<img src="images/Insta-6.png" alt="">
-						<img src="images/Insta-7.png" alt="">
-						<img src="images/Insta-8.png" alt="">
-						<img src="images/Insta-9.png" alt="">
+						<h2>Follow me on instagram</h2>
+						<a href="#">@dianthykock</a>
+						<div>
+							<img src="images/Insta-1.png" alt="">
+							<img src="images/Insta-2.png" alt="">
+							<img src="images/Insta-3.png" alt="">
+							<img src="images/Insta-4.png" alt="">
+							<img src="images/Insta-5.png" alt="">
+							<img src="images/Insta-6.png" alt="">
+							<img src="images/Insta-7.png" alt="">
+							<img src="images/Insta-8.png" alt="">
+							<img src="images/Insta-9.png" alt="">
+						</div>
+					</div>
+					<div>
+						<h2>Keep up with new posts!</h2>
+						<p>Don't worry, only good stuff. No spam.</p>
+						<form action="#">
+							<input type="email" placeholder="Email address" name="email" id="email-adress" />
+							<input type="submit" value="Sign me up" />
+						</form>
+						<!--<a href="#" class="button">Sign me up</a>-->
 					</div>
 				</section>
 			</main>
 			<footer>
 				<section>
 					<h2>Navigations</h2>
-					<h3>The usual</h3>
-					<ul>
-						<li>home</li>
-						<li>about me</li>
-						<li>contact</li>
-					</ul>
-					<h3>Categories</h3>
-					<ul>
-						<li>thoughts</li>
-						<li>fashion</li>
-						<li>beauty & skincare</li>
-					</ul>
+					<div>
+						<h3>The usual</h3>
+						<ul>
+							<li>home</li>
+							<li>about me</li>
+							<li>contact</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Categories</h3>
+						<ul>
+							<li>thoughts</li>
+							<li>fashion</li>
+							<li>beauty & skincare</li>
+						</ul>
+					</div>
 				</section>
 				<section>
 					<h4>Copywrite © 2020 · <a href="#">Loucrèce</a> · Dianthy Kock</h4>
