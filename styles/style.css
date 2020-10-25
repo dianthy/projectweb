@@ -20,7 +20,7 @@ header {
 	margin-right: 1em;
 	margin-left: 1em;
 }
-h1 {
+header > h1 {
 	font-family: monarcha, serif;
 	font-weight: 700;
 	font-style: normal;
@@ -29,11 +29,13 @@ h1 {
 	text-align: center;
 	padding-left: 2em;
 	padding-right: 2em;
+	margin-top: 1.5em;
 }
 
 h1 a {
 	text-decoration: none;
 	color: #1A1818;
+	margin-top: 
 }
 
 body > nav:first-of-type {
@@ -42,7 +44,7 @@ body > nav:first-of-type {
 	width: 100%;
 	margin: 0 auto;
 	font-family: 'Montserrat', sans-serif;
-	font-size: clamp(14px, 4vw, 19px);
+	font-size: clamp(14px, 4vw, 16px);
 	text-transform: uppercase;
 	align-items: center;
 }
@@ -76,7 +78,7 @@ nav li:not(:last-child) {
 	margin-right: 1.4em;
 }
 
-nav:first-of-type li a, header nav:nth-of-type(2) li a {
+nav:first-of-type li a, header nav:first-of-type li a {
 	padding: 15px 10px;
 	text-decoration: none;
 	color: #1A1818;
@@ -86,36 +88,32 @@ nav:first-of-type li a, header nav:nth-of-type(2) li a {
 nav:first-of-type li a, nav:nth-of-type(2) li a {
       position: relative;
       text-decoration: none;
+}
 
-    }
-    a::before, a::after {
-      position: absolute;
-      content: "";
-      width: 0;
-      transition: .3s;
-    }
-    a::before {
-      bottom: 0;
-      left: 50%;
-      border-top: 2px #5667EB;
+nav ul:first-of-type li a::after, nav:nth-of-type(2) li a::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #5667EB;
+	transition: width 0.3s;
+}
 
-    }
-    a::after {
-      right: 50%;
-      bottom: 0;
-      border-bottom: 2px #5667EB;
-    }
-    a:hover::before, a:hover::after {
-      width: 50%;
-    }
+nav ul:first-of-type li a:hover::after, nav:nth-of-type(2) li a:hover::after {
+	width: 100%;
+	transition: .3s;
+}
+nav ul:first-of-type li a:hover, nav:nth-of-type(2) li a:hover {
+	color: #5667EB;
+}
 
-header nav:nth-of-type(2) {
+header nav:first-of-type {
 	font-family: 'Montserrat', sans-serif;
-	font-size: clamp(14px, 4vw, 19px);
+	font-size: clamp(14px, 4vw, 16px);
 	text-transform: uppercase;
 }
 
-header nav:nth-of-type(2) ul {
+header nav:first-of-type ul {
 	justify-content: center;
 }
 
@@ -126,6 +124,8 @@ figure {
 figure:first-of-type img {
 	width: 100%;
 	height: auto;
+	position: relative;
+    right: 1.7em;
 }
 
 
@@ -184,6 +184,97 @@ article div:nth-of-type(2) {
 	display: none;
 }
 
+#mobile-nav button {
+	background: none;
+    border: none;
+    padding: 2em;
+    margin: 1em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+#mobile-nav button img{ 
+	width: 2em;
+}
+
+
+#mobile-menu {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #FAF9E5;
+	opacity: 0;
+	transform: translateX(150%);
+	transition: opacity .5s ease;
+	z-index: 99;
+}
+
+ .open {
+ 	transform: translateX(0)!important;
+ 	opacity: 1 !important;
+ }
+
+
+#mobile-menu div:first-of-type {
+	display: flex;
+	flex-direction: column;
+}
+
+#mobile-menu h1 {
+	font-family: monarcha, serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: clamp(20px, 8vw, 54px);
+	text-align: center;
+	margin-top: 1.349em;
+}
+
+#mobile-menu div:first-of-type button{
+	background: none;
+    border: none;
+    padding: 2em;
+    margin: 1em;
+    position: fixed;
+    right: 0;
+    cursor: pointer;
+}
+
+#mobile-menu div:first-of-type button img{
+	width: 1.8em;
+}
+
+#mobile-menu ul {
+	list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 0;
+}
+
+#mobile-menu li {
+	margin: 1em 0 1em 0;
+}
+
+#mobile-menu li a{
+	text-decoration: none;
+	color: #1A1818;
+}
+
+#mobile-menu div:nth-of-type(2) {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#mobile-menu ul img {
+	width: 1em;
+}
 
 article img {
 	width: 18.5em;
@@ -231,7 +322,7 @@ time {
 	line-height: 1.6em;
 }
 
-.button {
+article:first-of-type button, article:nth-of-type(2) button, article:nth-of-type(3) button{
 	font-family: montserrat,sans-serif;
 	font-weight: 500;
 	font-style: normal;
@@ -241,13 +332,27 @@ time {
 	text-transform: uppercase;
 	border: 2px solid #1A1818;
 	background-color: transparent;
-	padding: 1em;
+	padding: 1em 6.5em;
 	text-decoration: none;
 	color: #1A1818;
 	text-align: center;
 	display: block;
-	width: 300px;
 	margin: 2em auto;
+	cursor: pointer; 
+}
+
+article:first-of-type button:hover {
+	color: #5667EB;
+	border-color: #5667EB;
+	background-color: rgba(86, 103, 235, 15%);
+	transition: .5s ease;
+}
+
+article:nth-of-type(2) button:hover {
+	color: #1A1818;
+	border-color: #1A1818;
+	background-color: rgba(0, 0, 0, 15%);
+	transition: .5s ease;
 }
 
 /*FASHION*/
@@ -265,7 +370,7 @@ article:nth-of-type(2) img {
 	border-radius: 0px 0px 0px 0px;
 }
 
-article:nth-of-type(2) .button {
+article:nth-of-type(2) button{
 	border: 2px solid #5667EB;
 	color: #5667EB;
 }
@@ -305,9 +410,11 @@ article:nth-of-type(3) img {
 	border-radius: 0px 0px 0px 0px;
 }
 
-article:nth-of-type(3) .button {
-	border: 2px solid #FAF9EC;
-	color: #FAF9EC;
+article:nth-of-type(3) button {
+	border: 2px solid #adadad;
+	color: #adadad;
+	padding: 1em 4em;
+	max-width: 300px;
 }
 
 /*section*/
@@ -405,6 +512,14 @@ input[type="submit"] {
     width: 100%;
 }
 
+input[type="submit"]:hover {
+	color: white;
+	background: black;
+	font-family: montserrat,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
 .thoughts2{
 		display: none;
 	}
@@ -496,6 +611,11 @@ footer h4 a{
 		max-width: 900px;
 	}
 
+
+	header > h1 { 
+		margin-top: .7em;
+	 }
+
 	article:not(:nth-of-type(3)) img {
 		width: 29vw;
 		height: 42vw;
@@ -511,13 +631,14 @@ footer h4 a{
 	}
 
 
-	article:first-of-type h3 {
+	article:first-of-type h3, article:first-of-type time {
 		text-align: left;
 	}
 
-	article:first-of-type div:nth-of-type(2) a{
+	article:first-of-type div:nth-of-type(2) button{
 		margin: 2em 0 0;
 		max-width: 300px;
+		padding: 1em;
 	}
 
 	article:nth-of-type(2) div:first-of-type {
@@ -532,15 +653,21 @@ footer h4 a{
 		text-align: center;
 	}
 
-	article:nth-of-type(2) div:nth-of-type(2) a{
+	article:nth-of-type(2) div:nth-of-type(2) button{
 		width: 300px;
 		margin: 2em auto;
+		padding: 1em;
 	}
 
 	/*section*/
 
 	main section {
 	display: flex;
+	}
+
+	.beauty-section {
+		display: block;
+		max-width: 800px;
 	}
 
 	main section div {
@@ -553,7 +680,8 @@ footer h4 a{
 	}*/
 
 	footer section:first-of-type {
-		max-width: 900px;
+		max-width: 1080px;
+		margin: 0 auto;
 	}
 
 	footer section:first-of-type h2{
@@ -569,11 +697,11 @@ footer h4 a{
 		display: flex;
 	}
 
-	time {
+	/*time {
 		position: absolute;
 		left: 0;
 		transform: rotate(-90deg);
-	}
+	}*/
 }
 
 @media (min-width: 905px) {
@@ -582,3 +710,81 @@ footer h4 a{
 	}
 }
 
+/*beauty page*/
+
+.beauty-h2 {
+    text-shadow: none;
+    font-size: clamp(1.1em, 4vw, 1.5em);
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-bottom: 3px solid black;
+    padding-bottom: 1em;
+    padding-top: 2em;
+}
+
+.beauty-h3 {
+	text-align: center;
+    max-width: 600px;
+    margin: 2em auto;
+    margin-bottom: 1.5em;
+    text-transform: capitalize;
+}
+
+.beauty-p {
+	font-size: clamp(0.837em, 2vw, 0.837em);
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: .1em;
+}
+
+.beauty-figure img {
+	position: static;
+	height: 25vw;
+}
+
+.beauty-section {
+	margin: 0 auto;
+	padding-top: 1em;
+    border-top: 1px solid black;
+    padding-bottom: 6em;
+}
+
+.beauty-section p {
+	font-size: clamp(0.837em, 2vw, 0.938em);
+}
+
+.beauty-section img {
+	width: 100%;
+    height: 100vw;
+    object-fit: cover;
+}
+
+h4 {
+	text-transform: uppercase;
+	font-family: Poppins, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: clamp(1em, 4vw, 1.5em);
+    line-height: 2em;
+}
+
+h5 {
+	text-transform: uppercase;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: clamp(1.3em, 4vw, 1.7em);
+    line-height: 2em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+h6 {
+	font-family: gastromond, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1.375em, 3vw, 2em);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
