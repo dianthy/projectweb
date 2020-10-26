@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-	
 	<head>
 		<meta charset="UTF-8">
 		<meta name="author" content="jouw naam">
@@ -18,7 +17,7 @@
 		<nav id="desktop-nav" class="top-nav">
 			<ul>
 				<li>
-					<a href="#">Home</a>
+					<a href="index.html">Home</a>
 				</li>
 				<li>
 					<a href="#">About me</a>
@@ -42,14 +41,16 @@
 		</nav>
 		<section id="mobile-menu">
 			<div>
-				<h1>Loucrèce</h1>
+				<h1>
+				<a href="index.html">Home</a>
+				</h1>
 				<button id="close-menu-button">
-					<img src="images/close.svg" alt="close menu">
+				<img src="images/close.svg" alt="close menu">
 				</button>
 			</div>
 			<div>
 				<ul>
-					<li><a href="#">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="#">About me</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
@@ -67,7 +68,7 @@
 			</div>
 		</section>
 		<header>
-			<h1 class="title"><a href="#">Loucrèce</a></h1>
+			<h1 class="title"><a href="index.html">Loucrèce</a></h1>
 			<nav id="desktop-nav">
 				<ul>
 					<li>
@@ -89,7 +90,7 @@
 			<article class="beauty-skincare">
 				<h2>Beauty & skincare</h2>
 				<div class="article-image">
-					<a href="#">
+					<a href="beauty.html">
 						<img src="images/bottles.png" alt="skincare bottles">
 					</a>
 				</div>
@@ -97,7 +98,7 @@
 					<time datetime="1-6-2020 12:13">11 jun, 2020</time>
 					<h3>Ethical beauty? Here's what you need to know!</h3>
 					<p>You’ve probably heard about “cruelty-free”, “vegan” and “organic” cosmetic products. But, what do these terms actually mean?</p>
-					<button>Read more</button>
+					<button onclick="window.location.href='beauty.html'">Read more</button>
 				</div>
 			</article>
 			<article>
@@ -123,7 +124,7 @@
 					</a>
 					<h3>Island Girl Meets the Lowlands</h3>
 					<p>Moving across the ocean to live in a new, bigger, country is quite a big step for an 18 year old.  New culture, new(-ish) language, different mentality, RESPONSIBILITIES?? How did I deal with this?</p>
-					<button>Post coming soon</button>
+					<button disabled="#">Post coming soon</button>
 				</article>
 				<section>
 					<div>
@@ -157,26 +158,25 @@
 					<div>
 						<h3>The usual</h3>
 						<ul>
-							<li>home</li>
-							<li>about me</li>
-							<li>contact</li>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#">About me</a></li>
+							<li><a href="#">Contact me</a></li>
 						</ul>
 					</div>
 					<div>
 						<h3>Categories</h3>
 						<ul>
-							<li>thoughts</li>
-							<li>fashion</li>
-							<li>beauty & skincare</li>
+							<li><a href="#">thoughts</a></li>
+							<li><a href="#">fashion</a></li>
+							<li><a href="#">beauty & skincare</a></li>
 						</ul>
 					</div>
 				</section>
 				<section>
-					<h4>Copywrite © 2020 · <a href="#">Loucrèce</a> · Dianthy Kock</h4>
+					<h4>Copywrite © 2020 · <a href="index.html">Loucrèce</a> · Dianthy Kock</h4>
 				</section>
 			</footer>
 			
 			<script src="scripts/script.js"></script>
 		</body>
-		
 	</html>
